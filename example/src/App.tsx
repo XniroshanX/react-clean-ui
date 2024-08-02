@@ -1,15 +1,15 @@
 import {
   Button,
-  usePlainUI,
-  PlainUIProvider,
+  useCleanUI,
+  CleanUIProvider,
 } from "@x-niroshan-x/react-clean-ui";
 
 const Header = () => {
-  const { dark, setDark } = usePlainUI();
+  const { dark, setDark } = useCleanUI();
   return (
     <div>
       <p>Dark mode is {dark ? "on" : "off"}</p>
-      <Button onClick={() => setDark(!dark)}>Toggle</Button>
+      <Button type="warning" onClick={() => setDark(!dark)}>Toggle</Button>
     </div>
   );
 };
@@ -17,9 +17,9 @@ const Header = () => {
 function App() {
   return (
     <div className="App">
-      <PlainUIProvider>
+      <CleanUIProvider>
         <Header />
-      </PlainUIProvider>
+      </CleanUIProvider>
     </div>
   );
 }

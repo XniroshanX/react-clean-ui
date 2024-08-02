@@ -1,20 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.usePlainUI = exports.PlainUIProvider = void 0;
+exports.useCleanUI = exports.CleanUIProvider = void 0;
 const jsx_runtime_1 = require("react/jsx-runtime");
 const react_1 = require("react");
-const PlainUIContext = (0, react_1.createContext)(undefined);
-const PlainUIProvider = ({ children, }) => {
+const theme_1 = require("../data/theme");
+const CleanUIContext = (0, react_1.createContext)(undefined);
+const CleanUIProvider = ({ children, }) => {
     const [dark, setDark] = (0, react_1.useState)(false);
-    return ((0, jsx_runtime_1.jsx)(PlainUIContext.Provider, { value: { dark, setDark }, children: children }));
+    const [themeConfiguration, setThemeConfiguration] = (0, react_1.useState)(theme_1.DefaultThemeConfiguration);
+    return ((0, jsx_runtime_1.jsx)(CleanUIContext.Provider, { value: { dark, setDark, themeConfiguration, setThemeConfiguration }, children: children }));
 };
-exports.PlainUIProvider = PlainUIProvider;
-const usePlainUI = () => {
-    const context = (0, react_1.useContext)(PlainUIContext);
+exports.CleanUIProvider = CleanUIProvider;
+const useCleanUI = () => {
+    const context = (0, react_1.useContext)(CleanUIContext);
     if (context === undefined) {
-        throw new Error("usePlainUI must be used within a PlainUIProvider");
+        throw new Error("useCleanUI must be used within a CleanUIProvider");
     }
     return context;
 };
-exports.usePlainUI = usePlainUI;
+exports.useCleanUI = useCleanUI;
 //# sourceMappingURL=theme.js.map
