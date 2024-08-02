@@ -1,0 +1,38 @@
+{
+  "name": "@x-niroshan-x/react-clean-ui",
+  "version": "0.0.1",
+  "description": "Bunch of react ui components that has clean ui design",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "npm run test",
+    "prebuild": "node ./scripts/pre-build.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x-NIROSHAN-x/react-clean-ui.git"
+  },
+  "keywords": [
+    "react",
+    "clean",
+    "ui"
+  ],
+  "author": "Niroshan Jayathilaka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/x-NIROSHAN-x/react-clean-ui/issues"
+  },
+  "homepage": "https://github.com/x-NIROSHAN-x/react-clean-ui#readme",
+  "peerDependencies": {
+    "react": ">=16.0.0 <19.0.0",
+    "react-dom": ">=16.0.0 <19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "5.5.4"
+  }
+}
