@@ -1,7 +1,10 @@
 import {
   Button,
+  Input,
   useCleanUI,
   CleanUIProvider,
+  TextArea,
+  Checkbox
 } from "@x-niroshan-x/react-clean-ui";
 
 const Header = () => {
@@ -9,7 +12,12 @@ const Header = () => {
   return (
     <div>
       <p>Dark mode is {dark ? "on" : "off"}</p>
-      <Button type="warning" onClick={() => setDark(!dark)}>Toggle</Button>
+      <Button variant="warning" onClick={() => setDark(!dark)}>
+        Toggle
+      </Button>
+      <Input />
+      <TextArea />
+      <Checkbox label="Checked" />
     </div>
   );
 };

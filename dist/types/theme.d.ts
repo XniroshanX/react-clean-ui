@@ -1,4 +1,4 @@
-export type ThemeTypes = "primary" | "default" | "secondary" | "success" | "danger" | "warning";
+export type ThemeTypes = "primary" | "default" | "secondary" | "info" | "success" | "danger" | "warning";
 export type ThemeConfiguration = {
     [key in ThemeTypes]: {
         dark: Theme;

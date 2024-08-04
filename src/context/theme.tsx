@@ -1,8 +1,13 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 import { ThemeConfiguration } from "../types/theme";
 import { DefaultThemeConfiguration } from "../data/theme";
 
-// Define the shape of the context value
 interface CleanUIContextType {
   dark: boolean;
   setDark: (dark: boolean) => void;
@@ -18,6 +23,14 @@ export const CleanUIProvider: React.FC<{ children: ReactNode }> = ({
   const [dark, setDark] = useState<boolean>(false);
   const [themeConfiguration, setThemeConfiguration] =
     useState<ThemeConfiguration>(DefaultThemeConfiguration);
+
+  useEffect(() => {
+    if (dark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [dark]);
 
   return (
     <CleanUIContext.Provider

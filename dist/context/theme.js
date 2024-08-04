@@ -8,6 +8,14 @@ const CleanUIContext = (0, react_1.createContext)(undefined);
 const CleanUIProvider = ({ children, }) => {
     const [dark, setDark] = (0, react_1.useState)(false);
     const [themeConfiguration, setThemeConfiguration] = (0, react_1.useState)(theme_1.DefaultThemeConfiguration);
+    (0, react_1.useEffect)(() => {
+        if (dark) {
+            document.documentElement.classList.add("dark");
+        }
+        else {
+            document.documentElement.classList.remove("dark");
+        }
+    }, [dark]);
     return ((0, jsx_runtime_1.jsx)(CleanUIContext.Provider, { value: { dark, setDark, themeConfiguration, setThemeConfiguration }, children: children }));
 };
 exports.CleanUIProvider = CleanUIProvider;
