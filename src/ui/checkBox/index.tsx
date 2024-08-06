@@ -5,7 +5,8 @@ export type CheckboxProps = {
   id?: string;
   variant?: ThemeTypes;
   checked?: boolean;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   label?: string;
 };
 
@@ -13,11 +14,12 @@ export const Checkbox = ({
   id,
   variant = "primary",
   checked = false,
+  className = "",
   onChange = () => {},
   label = "",
 }: CheckboxProps) => {
   return (
-    <label className={`checkbox.${variant}`}>
+    <label className={`checkbox.${variant} ${className}`}>
       <input id={id} type="checkbox" checked={checked} onChange={onChange} />
       {label && <span>{label}</span>}
     </label>

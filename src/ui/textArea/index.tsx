@@ -1,4 +1,3 @@
-
 import { ThemeTypes } from "../../types/theme";
 
 export type TextAreaProps = {
@@ -6,6 +5,7 @@ export type TextAreaProps = {
   variant?: ThemeTypes;
   placeholder?: string;
   value?: string;
+  className?: string;
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   onFocus?: () => void;
   onBlur?: () => void;
@@ -18,17 +18,17 @@ export const TextArea = ({
   variant = "primary",
   placeholder = "",
   value = "",
+  className = "",
   onChange = () => {},
   onFocus = () => {},
   onBlur = () => {},
   rows = 4,
   cols = 50,
 }: TextAreaProps) => {
-
   return (
     <textarea
       id={id}
-      className={`textarea.${variant}`}
+      className={`textarea.${variant} ${className}`}
       placeholder={placeholder}
       value={value}
       onChange={onChange}
