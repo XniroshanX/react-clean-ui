@@ -1,6 +1,6 @@
 {
   "name": "@x-niroshan-x/react-clean-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bunch of react ui components that has clean ui design",
   "main": "dist/index.js",
   "files": [
