@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useCleanUI = exports.CleanUIProvider = exports.SideMenu = exports.Text = exports.Box = exports.Checkbox = exports.TextArea = exports.Input = exports.Button = void 0;
+exports.useCleanUI = exports.CleanUIProvider = exports.Navbar = exports.SideMenu = exports.Text = exports.Box = exports.Checkbox = exports.TextArea = exports.Input = exports.Button = void 0;
 require("./styles/index.css");
 var button_1 = require("./ui/button");
 Object.defineProperty(exports, "Button", { enumerable: true, get: function () { return button_1.Button; } });
@@ -16,6 +16,8 @@ var text_1 = require("./ui/text");
 Object.defineProperty(exports, "Text", { enumerable: true, get: function () { return text_1.Text; } });
 var sideMenu_1 = require("./ui/sideMenu");
 Object.defineProperty(exports, "SideMenu", { enumerable: true, get: function () { return sideMenu_1.SideMenu; } });
+var navbar_1 = require("./ui/navbar");
+Object.defineProperty(exports, "Navbar", { enumerable: true, get: function () { return navbar_1.Navbar; } });
 var theme_1 = require("./context/theme");
 Object.defineProperty(exports, "CleanUIProvider", { enumerable: true, get: function () { return theme_1.CleanUIProvider; } });
 Object.defineProperty(exports, "useCleanUI", { enumerable: true, get: function () { return theme_1.useCleanUI; } });

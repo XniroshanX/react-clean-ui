@@ -12,10 +12,10 @@ const variantMapping = {
     p: "p",
     label: "label",
 };
-const Text = ({ id, children, className = "", variant = "p", }) => {
+const Text = ({ id, children, className = "", variant = "p", onClick = () => { }, }) => {
     // Get the HTML tag from the variantMapping
     const Tag = variantMapping[variant] || "p";
-    return ((0, jsx_runtime_1.jsx)(Tag, { id: id, className: `${className}`, children: children }));
+    return ((0, jsx_runtime_1.jsx)(Tag, { onClick: onClick, id: id, className: `${className}`, children: children }));
 };
 exports.Text = Text;
 //# sourceMappingURL=index.js.map

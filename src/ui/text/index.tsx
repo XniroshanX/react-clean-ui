@@ -6,6 +6,7 @@ export type TextProps = {
   variant?: TextTypes;
   className?: string;
   children?: ReactNode;
+  onClick?: () => void;
 };
 
 const variantMapping: { [key in TextTypes]: keyof JSX.IntrinsicElements } = {
@@ -24,11 +25,12 @@ export const Text = ({
   children,
   className = "",
   variant = "p",
+  onClick = () => {},
 }: TextProps) => {
   // Get the HTML tag from the variantMapping
   const Tag = variantMapping[variant] || "p";
   return (
-    <Tag id={id} className={`${className}`}>
+    <Tag onClick={onClick} id={id} className={`${className}`}>
       {children}
     </Tag>
   );

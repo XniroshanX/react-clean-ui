@@ -2,7 +2,7 @@
   background-color: white;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   height: 100%;
   z-index: 99;
   width: 16rem;
@@ -35,4 +35,27 @@
   .container {
     max-width: 960px;
   }
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
 }

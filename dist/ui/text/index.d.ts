@@ -5,6 +5,7 @@ export type TextProps = {
     variant?: TextTypes;
     className?: string;
     children?: ReactNode;
+    onClick?: () => void;
 };
-export declare const Text: ({ id, children, className, variant, }: TextProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Text: ({ id, children, className, variant, onClick, }: TextProps) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=index.d.ts.map

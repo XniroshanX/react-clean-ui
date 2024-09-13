@@ -8,6 +8,7 @@ import {
   Box,
   Text,
   SideMenu,
+  Navbar,
 } from "@x-niroshan-x/react-clean-ui";
 import { useState } from "react";
 
@@ -21,13 +22,19 @@ const Header = () => {
 
   return (
     <Box className="clean-ui-container">
+      <Navbar logo="/logo512.png">
+        <Text onClick={() => setShowSideMenu(!showSideMenu)}>Show</Text>
+      </Navbar>
+
       <Box className="dark-mode-container">
         <Text variant="h1">React Clean UI</Text>
         <Box className="sidebar-container">
           <Text variant="h2">Side Menu</Text>
           <Text variant="p">Fully configurable side menu</Text>
-          <Button onClick={() => setShowSideMenu(!showSideMenu)}>Show</Button>
-          <SideMenu show={showSideMenu} />
+
+          <SideMenu show={showSideMenu}>
+            <Text onClick={() => setShowSideMenu(!showSideMenu)}>Hide</Text>
+          </SideMenu>
         </Box>
         <Text variant="h2">Dark Mode Support</Text>
         <Text>

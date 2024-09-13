@@ -6,5 +6,6 @@ export { Checkbox, CheckboxProps } from "./ui/checkBox";
 export { Box, BoxProps } from "./ui/box";
 export { Text, TextProps } from "./ui/text";
 export { SideMenu, SideMenuProps } from "./ui/sideMenu";
+export { Navbar, NavbarProps } from "./ui/navbar";
 export { CleanUIProvider, useCleanUI } from "./context/theme";
 //# sourceMappingURL=index.d.ts.map
