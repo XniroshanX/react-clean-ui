@@ -1,0 +1,38 @@
+.sidemenu-container {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 99;
+  width: 16rem;
+  padding: 1rem;
+  -webkit-box-shadow: 12px 0px 20px -14px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 12px 0px 20px -14px rgba(0, 0, 0, 0.42);
+  box-shadow: 12px 0px 20px -14px rgba(0, 0, 0, 0.42);
+}
+
+.container {
+  width: 100%;
+}
+
+/* Small devices (landscape phones, ≥576px) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Medium devices (tablets, ≥768px) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large devices (desktops, ≥992px) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}

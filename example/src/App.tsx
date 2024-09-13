@@ -7,6 +7,7 @@ import {
   Checkbox,
   Box,
   Text,
+  SideMenu,
 } from "@x-niroshan-x/react-clean-ui";
 import { useState } from "react";
 
@@ -16,11 +17,18 @@ const Header = () => {
   const [textInput, setTextInput] = useState("");
   const [textAreaInput, setTextAreaInput] = useState("");
   const [checkBoxStatus, setCheckBoxStatus] = useState(false);
+  const [showSideMenu, setShowSideMenu] = useState(false);
 
   return (
     <Box className="clean-ui-container">
       <Box className="dark-mode-container">
         <Text variant="h1">React Clean UI</Text>
+        <Box className="sidebar-container">
+          <Text variant="h2">Side Menu</Text>
+          <Text variant="p">Fully configurable side menu</Text>
+          <Button onClick={() => setShowSideMenu(!showSideMenu)}>Show</Button>
+          <SideMenu show={showSideMenu} />
+        </Box>
         <Text variant="h2">Dark Mode Support</Text>
         <Text>
           Dark mode is implemented by adding the <code>dark</code> class to the{" "}
